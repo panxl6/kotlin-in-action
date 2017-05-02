@@ -52,13 +52,68 @@ fun main(args: Array<String>) {
 
 
 ## 函数
+常规定义
 ```
 fun max(a: Int, b: Int): Int {
   return if (a > b) a else b
 }
 ```
 
+把函数当成表达式
 `fun max(a: Int, b: Int): Int = if (a > b) a else b`
+
+使用命名参数
+```
+fun <T> joinToString(
+  collection: Collection<T>,
+  separator: String,
+  prefix: String,
+  postfix: String
+): String {
+  val result = StringBuilder(prefix)
+  
+  for ((index, element) in collection.withIndex()) {
+    if (index > 0) result.append(separator)
+    result.append(element)
+  }
+  
+  result.append(postfix)
+  return result.toString()
+}
+
+joinToString(collection, separator = " ", prefix = " ", postfix = ".")
+```
+
+使用参数默认值
+```
+>>> val list = listOf(1, 2, 3)
+>>> println(list)
+[1, 2, 3]
+
+fun <T> joinToString(
+  collection: Collection<T>,
+  separator: String = ", ",
+  prefix: String = "",
+  postfix: String = ""
+): String {
+  val result = StringBuilder(prefix)
+  
+  for ((index, element) in collection.withIndex()) {
+    if (index > 0) result.append(separator)
+    result.append(element)
+  }
+  
+  result.append(postfix)
+  return result.toString()
+}
+
+>>> joinToString(list, ", ", "", "")
+1, 2, 3
+>>> joinToString(list)
+1, 2, 3
+>>> joinToString(list, "; ")
+1; 2; 3
+```
 
 ## 控制结构
 
@@ -73,6 +128,7 @@ fun max(a: Int, b: Int): Int {
 ## 集合
 
 ## 异常处理
+
 ```
 fun readNumber(reader: BufferedReader): Int? {
   try {
