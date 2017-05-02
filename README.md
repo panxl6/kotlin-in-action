@@ -73,6 +73,20 @@ fun max(a: Int, b: Int): Int {
 ## 集合
 
 ## 异常处理
+```
+fun readNumber(reader: BufferedReader): Int? {
+  try {
+    val line = reader.readLine()
+    return Integer.parseInt(line)
+  }
+  catch (e: NumberFormatException) {
+    return null
+  }
+  finally {
+    reader.close()
+  }
+}
+```
 
 ## 文件操作
 
@@ -81,6 +95,13 @@ fun max(a: Int, b: Int): Int {
 ## 领域特定语言
 
 ## 函数式支持
+
+## 枚举类
+```
+enum class Color {
+  RED, ORANGE, YELLOW, GREEN, BLUE, INDIGO, VIOLET
+}
+```
 
 ## 常用函数
 
