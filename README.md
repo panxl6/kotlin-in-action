@@ -9,11 +9,13 @@ fun main(args: Array<String>) {
 ```
 
 ## 可变和不可变类型
+`var`的内容来自变量。它可以随时改变。
 ```
 var answer = 12
 answer = 13 // 编译通过
 ```
 
+`val`的内容来自值。初始化之后不能改变。
 ```
 val age = 18
 age = 19 // 编译错误
@@ -31,6 +33,23 @@ age = 19 // 编译错误
 "The Ultimate Question of Life, the Universe, and Everything"`
 
 ## 输入输出
+字符串模板
+```
+val $name = 'world'
+println("Hello, $name!")
+```
+
+大括号内可以是kotlin表达式
+```
+fun main(args: Array<String>) {
+  if (args.size > 0) {
+    println("Hello, ${args[0]}!")
+  }
+  
+  println("Hello, ${if (args.size > 0) args[0] else "someone"}!")
+}
+```
+
 
 ## 函数
 ```
