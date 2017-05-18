@@ -1,4 +1,5 @@
 > [Google正式支持Kotlin啦~](https://blog.jetbrains.com/kotlin/2017/05/kotlin-on-android-now-official/)
+>
 > Java 8推广不及预期，Java 9争议颇多，来试试Kotlin吧!
 
 # Kotlin语法一览
