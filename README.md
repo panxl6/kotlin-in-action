@@ -1,3 +1,5 @@
+> [Google正式支持Kotlin啦~](https://blog.jetbrains.com/kotlin/2017/05/kotlin-on-android-now-official/)
+
 # Kotlin语法一览
 
 ## Hello world
