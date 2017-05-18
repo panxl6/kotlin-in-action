@@ -49,6 +49,7 @@ a = null // 编译通过
 ## 数据类型
 
 整数类型：`val answer: Int = 42`
+*1.1版本开始支持类似swift的下划线分隔: `val oneMillion = 1_000_000`*
 
 浮点类型：`val yearsToCompute = 7.5e6`
 
