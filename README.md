@@ -155,12 +155,22 @@ class Person(
   var isMarried: Boolean
 )
 
+// 定义类方法
+class Person(
+  val name: String,
+  var isMarried: Boolean
+) {
+  fun sayHello() {
+    println("hello $name")
+  }
+}
+
 // 创建类实例
 >>> val person = Person("Bob", true)
 >>> println(person.name)
 Bob
->>> println(person.isMarried)
-true
+>>> person.sayHello()
+hello BOb
 ```
 
 ## 类的访问修饰符
