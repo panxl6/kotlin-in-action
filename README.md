@@ -44,6 +44,9 @@ age = 19 // 编译错误
 ```
 var a: String? = "abc"
 a = null // 编译通过
+
+var b: String = "abc"
+b = null // 编译错误
 ```
 
 ## 数据类型
@@ -108,7 +111,7 @@ fun <T> joinToString(
 joinToString(collection, separator = " ", prefix = " ", postfix = ".")
 ```
 
-使用参数默认值
+使用参数默认值（实现类似于重载的功能）
 ```
 >>> val list = listOf(1, 2, 3)
 >>> println(list)
@@ -144,6 +147,19 @@ fun <T> joinToString(
 ## 类
 
 ## 接口
+
+```
+// 定义接口
+interface Clickable {
+  fun click()
+  fun showOff() = println("I'm clickable!") // 接口可以有默认的实现
+}
+
+// 实现接口
+class Button : Clickable {
+  override fun click() = println("I was clicked")
+}
+```
 
 ## traits
 
