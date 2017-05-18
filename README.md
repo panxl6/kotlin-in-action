@@ -190,6 +190,13 @@ hello BOb
 | `protected` | 子类内部可见 | 不可见 |
 | `private` | 类内部可见 | 在文件中可见 |
 
+## 枚举类
+```
+enum class Color {
+  RED, ORANGE, YELLOW, GREEN, BLUE, INDIGO, VIOLET
+}
+```
+
 ## 接口
 
 ```
@@ -237,21 +244,14 @@ fun readNumber(reader: BufferedReader): Int? {
 
 ## 函数式支持
 
-## 枚举类
-```
-enum class Color {
-  RED, ORANGE, YELLOW, GREEN, BLUE, INDIGO, VIOLET
-}
-```
+
 
 ## 常用函数
 
 ## IDE快捷键
 
 
-# Kotlin-in-action
-
-Kotlin in action 一书的中文翻译
+# Kotlin-in-action中文翻译
 
 更方便的阅读模式请移步[gitbook项目](https://www.gitbook.com/book/panxl6/kotlin-in-action-in-chinese)
 
