@@ -145,6 +145,40 @@ fun <T> joinToString(
 ## 控制结构
 
 ## 类
+```
+// 定义一个类
+class Person(val name: String)
+
+// 定义类属性
+class Person(
+  val name: String,
+  var isMarried: Boolean
+)
+
+// 创建类实例
+>>> val person = Person("Bob", true)
+>>> println(person.name)
+Bob
+>>> println(person.isMarried)
+true
+```
+
+## 类的访问修饰符
+|修饰符 | 对应的成员 | 备注 |
+|-------|-----------|-----|
+| `final` | 不能被覆盖 | 类成员的默认修饰符 |
+| `open`  | 可以被覆盖 | 必须显式的指定 |
+| `abstract` |必须被覆盖| 只能在抽象类中使用，抽象成员不能有实现 |
+| `override` | 在一个子类中覆盖一个成员 | 如果没有被标记为`final`，覆盖的成员默认是开放的。 |
+
+## 类的可见性修饰符
+
+|修饰符 | 对应的成员 | 顶层声明 |
+|-------|-----------|-----|
+| `public(默认可见性)` | 所有地方可见 | 所有地方可见 |
+| `internal` | 模块内可见 | 模块内可见 |
+| `protected` | 子类内部可见 | 不可见 |
+| `private` | 类内部可见 | 在文件中可见 |
 
 ## 接口
 
@@ -159,6 +193,7 @@ interface Clickable {
 class Button : Clickable {
   override fun click() = println("I was clicked")
 }
+
 ```
 
 ## traits
