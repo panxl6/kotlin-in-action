@@ -7,8 +7,22 @@
 ## Hello world
 
 ```
+// 最简版
 fun main(args: Array<String>) {
   println("Hello, world!")
+}
+```
+
+```
+// 面向对象版
+class Greeter(val name: String) {
+  fun greet() {
+    println("Hello, $name")
+  }
+}
+
+fun main(args: Array<String>) {
+  Greeter(args[0]).greet()
 }
 ```
 
@@ -26,6 +40,11 @@ age = 19 // 编译错误
 ```
 
 ## 可为空类型
+
+```
+var a: String? = "abc"
+a = null // 编译通过
+```
 
 ## 数据类型
 
