@@ -246,6 +246,13 @@ class A {
 >>> A.bar()
 Companion object called
 ```
+## Lambda表达式
+```
+>>> val sum = { x: Int, y: Int -> x + y } // 定义lambda表达式
+>>> println(sum(1, 2))
+3
+```
+![lambda syntax](https://panxl6.gitbooks.io/kotlin-in-action-in-chinese/content/assets/5.1.jpg)
 
 ## 类型系统
 
