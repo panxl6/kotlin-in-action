@@ -27,14 +27,15 @@ fun main(args: Array<String>) {
 ```
 
 ## 可变和不可变类型
-`var`的内容来自变量。它可以随时改变。
+
 ```
+// var的内容来自变量。它可以随时改变。
 var answer = 12
 answer = 13 // 编译通过
 ```
 
-`val`的内容来自值。初始化之后不能改变。
 ```
+// val的内容来自值。初始化之后不能改变。
 val age = 18
 age = 19 // 编译错误
 ```
@@ -91,11 +92,13 @@ fun max(a: Int, b: Int): Int {
 }
 ```
 
-把函数当成表达式
-`fun max(a: Int, b: Int): Int = if (a > b) a else b`
-
-使用命名参数
 ```
+// 把函数当成表达式
+fun max(a: Int, b: Int): Int = if (a > b) a else b
+```
+
+```
+// 使用命名参数
 fun <T> joinToString(
   collection: Collection<T>,
   separator: String,
@@ -115,7 +118,6 @@ fun <T> joinToString(
 
 joinToString(collection, separator = " ", prefix = " ", postfix = ".")
 ```
-
 
 ```
 // 使用参数默认值（实现类似于重载的功能）
