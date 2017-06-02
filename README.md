@@ -232,6 +232,20 @@ Payroll.calculateSalary()
 ```
 
 ## 伴生对象
+```
+// 定义伴生对象
+class A {
+  companion object {
+    fun bar() {
+      println("Companion object called")
+    }
+  }
+}
+
+// 调用伴生对象
+>>> A.bar()
+Companion object called
+```
 
 ## 类型系统
 
