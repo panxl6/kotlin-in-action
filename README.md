@@ -50,24 +50,29 @@ b = null // 编译错误
 ```
 
 ## 数据类型
+```
+// 整数类型
+val answer: Int = 42
+// 1.1版本开始支持类似swift的下划线分隔
+val oneMillion = 1_000_000
 
-整数类型：`val answer: Int = 42`
-*1.1版本开始支持类似swift的下划线分隔: `val oneMillion = 1_000_000`*
+// 浮点类型
+val yearsToCompute = 7.5e6
 
-浮点类型：`val yearsToCompute = 7.5e6`
-
-字符类型: `val question =
-"The Ultimate Question of Life, the Universe, and Everything"`
+// 字符类型
+val question = "The Ultimate Question of Life, the Universe, and Everything"
+```
 
 ## 输入输出
-字符串模板
+
 ```
+// 字符串模板
 val $name = 'world'
 println("Hello, $name!")
 ```
 
-大括号内可以是kotlin表达式
 ```
+// 大括号内可以是kotlin表达式
 fun main(args: Array<String>) {
   if (args.size > 0) {
     println("Hello, ${args[0]}!")
@@ -79,8 +84,8 @@ fun main(args: Array<String>) {
 
 
 ## 函数
-常规定义
 ```
+// 常规定义
 fun max(a: Int, b: Int): Int {
   return if (a > b) a else b
 }
@@ -111,8 +116,9 @@ fun <T> joinToString(
 joinToString(collection, separator = " ", prefix = " ", postfix = ".")
 ```
 
-使用参数默认值（实现类似于重载的功能）
+
 ```
+// 使用参数默认值（实现类似于重载的功能）
 >>> val list = listOf(1, 2, 3)
 >>> println(list)
 [1, 2, 3]
