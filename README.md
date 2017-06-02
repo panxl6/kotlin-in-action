@@ -214,6 +214,22 @@ class Button : Clickable {
 ```
 
 ## 对象声明
+```
+// 定义对象
+object Payroll {
+  val allEmployees = arrayListOf<Person>()
+  
+  fun calculateSalary() {
+    for (person in allEmployees) {
+      ...
+    }
+  }
+}
+
+// 使用对象
+Payroll.allEmployees.add(Person(...))
+Payroll.calculateSalary()
+```
 
 ## 伴生对象
 
