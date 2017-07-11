@@ -150,6 +150,14 @@ fun <T> joinToString(
 1; 2; 3
 ```
 
+## 扩展函数
+*扩展函数是定义在类外部，但却能够以类的成员函数的方式进行调用的函数。*
+```
+package strings
+
+fun String.lastChar(): Char = this.get(this.length - 1)
+``
+
 ## 控制结构
 
 ## 类
@@ -273,8 +281,6 @@ Companion object called
 ## 泛型
 
 ## traits
-
-## 扩展函数
 
 ## 集合
 
