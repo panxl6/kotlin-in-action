@@ -156,7 +156,7 @@ fun <T> joinToString(
 package strings
 
 fun String.lastChar(): Char = this.get(this.length - 1)
-``
+```
 
 ## 控制结构
 
