@@ -6,14 +6,14 @@
 
 ## Hello world
 
-```
+```kotlin
 // 最简版
 fun main(args: Array<String>) {
   println("Hello, world!")
 }
 ```
 
-```
+```kotlin
 // 面向对象版
 class Greeter(val name: String) {
   fun greet() {
@@ -28,13 +28,13 @@ fun main(args: Array<String>) {
 
 ## 可变和不可变类型
 
-```
+```kotlin
 // var的内容来自变量。它可以随时改变。
 var answer = 12
 answer = 13 // 编译通过
 ```
 
-```
+```kotlin
 // val的内容来自值。初始化之后不能改变。
 val age = 18
 age = 19 // 编译错误
@@ -42,7 +42,7 @@ age = 19 // 编译错误
 
 ## 可为空类型
 
-```
+```kotlin
 var a: String? = "abc"
 a = null // 编译通过
 
@@ -51,7 +51,7 @@ b = null // 编译错误
 ```
 
 ## 数据类型
-```
+```kotlin
 // 整数类型
 val answer: Int = 42
 // 1.1版本开始支持类似swift的下划线分隔
@@ -66,13 +66,13 @@ val question = "The Ultimate Question of Life, the Universe, and Everything"
 
 ## 输入输出
 
-```
+```kotlin
 // 字符串模板
 val $name = 'world'
 println("Hello, $name!")
 ```
 
-```
+```kotlin
 // 大括号内可以是kotlin表达式
 fun main(args: Array<String>) {
   if (args.size > 0) {
@@ -85,19 +85,19 @@ fun main(args: Array<String>) {
 
 
 ## 函数
-```
+```kotlin
 // 常规定义
 fun max(a: Int, b: Int): Int {
   return if (a > b) a else b
 }
 ```
 
-```
+```kotlin
 // 把函数当成表达式
 fun max(a: Int, b: Int): Int = if (a > b) a else b
 ```
 
-```
+```kotlin
 // 使用命名参数
 fun <T> joinToString(
   collection: Collection<T>,
@@ -119,7 +119,7 @@ fun <T> joinToString(
 joinToString(collection, separator = " ", prefix = " ", postfix = ".")
 ```
 
-```
+```kotlin
 // 使用参数默认值（实现类似于重载的功能）
 >>> val list = listOf(1, 2, 3)
 >>> println(list)
@@ -152,7 +152,7 @@ fun <T> joinToString(
 
 ## 扩展函数
 *扩展函数是定义在类外部，但却能够以类的成员函数的方式进行调用的函数。*
-```
+```kotlin
 package strings
 
 fun String.lastChar(): Char = this.get(this.length - 1)
@@ -161,7 +161,7 @@ fun String.lastChar(): Char = this.get(this.length - 1)
 ## 控制结构
 
 ## 类
-```
+```kotlin
 // 定义一个类
 class Person(val name: String)
 
@@ -207,7 +207,7 @@ hello BOb
 | `private` | 类内部可见 | 在文件中可见 |
 
 ## 枚举类
-```
+```kotlin
 enum class Color {
   RED, ORANGE, YELLOW, GREEN, BLUE, INDIGO, VIOLET
 }
@@ -215,7 +215,7 @@ enum class Color {
 
 ## 接口
 
-```
+```kotlin
 // 定义接口
 interface Clickable {
   fun click()
@@ -230,7 +230,7 @@ class Button : Clickable {
 ```
 
 ## 对象声明
-```
+```kotlin
 // 定义对象
 object Payroll {
   val allEmployees = arrayListOf<Person>()
@@ -248,7 +248,7 @@ Payroll.calculateSalary()
 ```
 
 ## 伴生对象
-```
+```kotlin
 // 定义伴生对象
 class A {
   companion object {
@@ -263,7 +263,7 @@ class A {
 Companion object called
 ```
 ## Lambda表达式
-```
+```kotlin
 >>> val sum = { x: Int, y: Int -> x + y } // 定义lambda表达式
 >>> println(sum(1, 2))
 3
@@ -286,7 +286,7 @@ Companion object called
 
 ## 异常处理
 
-```
+```kotlin
 fun readNumber(reader: BufferedReader): Int? {
   try {
     val line = reader.readLine()
@@ -308,21 +308,21 @@ fun readNumber(reader: BufferedReader): Int? {
 *如果你对函数式编程不是特别了解，可以看一看[《函数式编程思维》](https://www.amazon.cn/%E5%9B%BE%E4%B9%A6/dp/B014SCOQA0)*
 
 **filter**
-```
+```kotlin
 >>> val list = listOf(1, 2, 3, 4)
 >>> list.filter { it % 2 == 0 }
 [2, 4]
 ```
 
 **map**
-```
+```kotlin
 >>> val list = listOf(1, 2, 3, 4)
 >>> list.map { it * it }
 [1, 4, 9, 16]
 ```
 
 **all**
-```
+```kotlin
 val canBeInClub27 = { p: Person -> p.age <= 27 }
 
 >>> val people = listOf(Person("Alice", 27), Person("Bob", 31))
@@ -331,7 +331,7 @@ false
 ```
 
 **any**
-```
+```kotlin
 val canBeInClub27 = { p: Person -> p.age <= 27 }
 
 >>> val people = listOf(Person("Alice", 27), Person("Bob", 31))
@@ -340,14 +340,14 @@ true
 ```
 
 **count**
-```
+```kotlin
 >>> val people = listOf(Person("Alice", 27), Person("Bob", 31))
 >>> println(people.count(canBeInClub27))
 1
 ```
 
 **find**
-```
+```kotlin
 >>> val people = listOf(Person("Alice", 27), Person("Bob", 31))
 >>> println(people.find(canBeInClub27))
 Person(name=Alice, age=27)
@@ -356,7 +356,6 @@ Person(name=Alice, age=27)
 ## 领域特定语言
 
 ## 函数式支持
-
 
 
 ## 常用函数
