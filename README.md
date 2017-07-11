@@ -299,6 +299,54 @@ fun readNumber(reader: BufferedReader): Int? {
 
 ## 函数式支持
 
+*如果你对函数式编程不是特别了解，可以看一看[《函数式编程思维》](https://www.amazon.cn/%E5%9B%BE%E4%B9%A6/dp/B014SCOQA0)*
+
+**filter**
+```
+>>> val list = listOf(1, 2, 3, 4)
+>>> list.filter { it % 2 == 0 }
+[2, 4]
+```
+
+**map**
+```
+>>> val list = listOf(1, 2, 3, 4)
+>>> list.map { it * it }
+[1, 4, 9, 16]
+```
+
+**all**
+```
+val canBeInClub27 = { p: Person -> p.age <= 27 }
+
+>>> val people = listOf(Person("Alice", 27), Person("Bob", 31))
+>>> println(people.all(canBeInClub27))
+false
+```
+
+**any**
+```
+val canBeInClub27 = { p: Person -> p.age <= 27 }
+
+>>> val people = listOf(Person("Alice", 27), Person("Bob", 31))
+>>> println(people.any(canBeInClub27))
+true
+```
+
+**count**
+```
+>>> val people = listOf(Person("Alice", 27), Person("Bob", 31))
+>>> println(people.count(canBeInClub27))
+1
+```
+
+**find**
+```
+>>> val people = listOf(Person("Alice", 27), Person("Bob", 31))
+>>> println(people.find(canBeInClub27))
+Person(name=Alice, age=27)
+```
+
 ## 领域特定语言
 
 ## 函数式支持
