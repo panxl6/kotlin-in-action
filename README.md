@@ -313,7 +313,8 @@ fun readNumber(reader: BufferedReader): Int? {
 >>> list.filter { it % 2 == 0 }
 [2, 4]
 ```
-![图5.3](blob:https://www.gitbook.com/e626adc9-30f8-4485-8756-a30956e443c2)
+
+![图5.3](http://osimdjby7.bkt.clouddn.com/5.3.png)
 
 
 **map**
@@ -322,7 +323,8 @@ fun readNumber(reader: BufferedReader): Int? {
 >>> list.map { it * it }
 [1, 4, 9, 16]
 ```
-![图5.4](blob:https://www.gitbook.com/5454788b-6218-450e-a51f-7cb935747aba)
+
+![图5.4](http://osimdjby7.bkt.clouddn.com/5.4.png)
 
 **all**
 ```kotlin
