@@ -2,6 +2,8 @@
 >
 > Java 8推广不及预期，Java 9争议颇多，来试试Kotlin吧!
 
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-no-red.svg)](https://bitbucket.org/lbesson/ansi-colors)
+
 # Kotlin语法一览
 
 ## Hello world
